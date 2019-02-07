@@ -8,8 +8,10 @@
 
 #if __has_include("RCTVideoCache.h")
 #import "RCTVideoCache.h"
-#import <DVAssetLoaderDelegate/DVURLAsset.h>
-#import <DVAssetLoaderDelegate/DVAssetLoaderDelegate.h>
+#import <DVURLAsset.h>
+#import <DVAssetLoaderDelegate.h>
+//#import <DVAssetLoaderDelegate/DVURLAsset.h>
+//#import <DVAssetLoaderDelegate/DVAssetLoaderDelegate.h>
 #endif
 
 @class RCTEventDispatcher;

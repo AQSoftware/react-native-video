@@ -16,6 +16,8 @@
 		D1107C102110259000073188 /* RCTVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1107C082110259000073188 /* RCTVideoPlayerViewController.m */; };
 		D1107C112110259000073188 /* RCTVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1107C082110259000073188 /* RCTVideoPlayerViewController.m */; };
 		E3E95ECA220CB393003B2401 /* RCTVideoCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E3E95EC9220CB393003B2401 /* RCTVideoCache.m */; };
+		E3E95ECC220CB985003B2401 /* SPTPersistentCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E95ECB220CB985003B2401 /* SPTPersistentCache.framework */; };
+		E3E95ECE220CB98A003B2401 /* DVAssetLoaderDelegate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3E95ECD220CB98A003B2401 /* DVAssetLoaderDelegate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,6 +55,8 @@
 		D1107C092110259000073188 /* RCTVideoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTVideoManager.h; path = Video/RCTVideoManager.h; sourceTree = "<group>"; };
 		E3E95EC8220CB393003B2401 /* RCTVideoCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTVideoCache.h; path = VideoCaching/RCTVideoCache.h; sourceTree = "<group>"; };
 		E3E95EC9220CB393003B2401 /* RCTVideoCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTVideoCache.m; path = VideoCaching/RCTVideoCache.m; sourceTree = "<group>"; };
+		E3E95ECB220CB985003B2401 /* SPTPersistentCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SPTPersistentCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3E95ECD220CB98A003B2401 /* DVAssetLoaderDelegate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DVAssetLoaderDelegate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3E95ECE220CB98A003B2401 /* DVAssetLoaderDelegate.framework in Frameworks */,
+				E3E95ECC220CB985003B2401 /* SPTPersistentCache.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +90,8 @@
 		49E995712048B4CE00EA7890 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E3E95ECD220CB98A003B2401 /* DVAssetLoaderDelegate.framework */,
+				E3E95ECB220CB985003B2401 /* SPTPersistentCache.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -290,6 +298,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/Vendor/SPTPersistentCache/include/**",
+					"$(SRCROOT)/../../../ios/Pods/**",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
@@ -305,6 +314,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/Vendor/SPTPersistentCache/include/**",
+					"$(SRCROOT)/../../../ios/Pods/**",
 				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
