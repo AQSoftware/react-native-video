@@ -73,7 +73,7 @@ static int const RCTVideoUnset = -1;
   NSString *_filterName;
   BOOL _filterEnabled;
   UIViewController * _presentingViewController;
-#if __has_include(<react-native-video/RCTVideoCache.h>)
+#if __has_include("RCTVideoCache.h")
   RCTVideoCache * _videoCache;
 #endif
 }
@@ -101,7 +101,7 @@ static int const RCTVideoUnset = -1;
     _allowsExternalPlayback = YES;
     _playWhenInactive = false;
     _ignoreSilentSwitch = @"inherit"; // inherit, ignore, obey
-#if __has_include(<react-native-video/RCTVideoCache.h>)
+#if __has_include("RCTVideoCache.h")
     _videoCache = [RCTVideoCache sharedInstance];
 #endif
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -483,7 +483,7 @@ static int const RCTVideoUnset = -1;
     NSArray *cookies = [[NSHTTPCookieStorage sharedHTTPCookieStorage] cookies];
     [assetOptions setObject:cookies forKey:AVURLAssetHTTPCookiesKey];
 
-#if __has_include(<react-native-video/RCTVideoCache.h>)
+#if __has_include("RCTVideoCache.h")
     if (shouldCache && (!_textTracks || !_textTracks.count)) {
       /* The DVURLAsset created by cache doesn't have a tracksWithMediaType property, so trying
        * to bring in the text track code will crash. I suspect this is because the asset hasn't fully loaded.
@@ -508,7 +508,7 @@ static int const RCTVideoUnset = -1;
   [self playerItemPrepareText:asset assetOptions:assetOptions withCallback:handler];
 }
 
-#if __has_include(<react-native-video/RCTVideoCache.h>)
+#if __has_include("RCTVideoCache.h")
 
 - (void)playerItemForSourceUsingCache:(NSString *)uri assetOptions:(NSDictionary *)options withCallback:(void(^)(AVPlayerItem *))handler {
     NSURL *url = [NSURL URLWithString:uri];
